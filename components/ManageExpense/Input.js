@@ -6,23 +6,23 @@ function Input({ invalid, label, style, textInputConfig }) {
 
     const inputStyles = [styles.input];
 
-    if (textInputConfig && textInputConfig.multiline) { // if textInputConfig exists and textInputConfig.multiline is true
+    if (textInputConfig && textInputConfig.multiline) {
         inputStyles.push(styles.inputMultiLine)
     }
-        
-    if (invalid){
+
+    if (invalid) {
         inputStyles.push(styles.invalidInput);
     }
 
     return (
         <View style={[styles.inputContainer, style]}>
-            <Text style={[styles.label, invalid &&styles.invalidLabel]}>{label}</Text>
+            <Text style={[styles.label, invalid && styles.invalidLabel]}>{label}</Text>
             <TextInput style={inputStyles} {...textInputConfig} />
         </View>
     );
 }
 
-const styles= StyleSheet.create({
+const styles = StyleSheet.create({
     inputContainer: {
         marginHorizontal: 4,
         marginVertical: 8,
@@ -39,7 +39,7 @@ const styles= StyleSheet.create({
         borderRadius: 6,
         fontSize: 18
     },
-    inputMultiLine:{
+    inputMultiLine: {
         minHeight: 100,
         textAlignVertical: 'top'
     },

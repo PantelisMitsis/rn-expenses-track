@@ -1,4 +1,4 @@
-import {View, ActivityIndicator, StyleSheet} from 'react-native';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { GlobalStyles } from '../../constants/styles';
 
 function LoadingOverlay() {
@@ -8,11 +8,11 @@ function LoadingOverlay() {
 }
 
 
-const styles= StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
     justifyContent: 'center',
-    alignItems:'center',
+    alignItems: 'center',
     padding: 24,
     backgroundColor: GlobalStyles.colors.primary500
   }
